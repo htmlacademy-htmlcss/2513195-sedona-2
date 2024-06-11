@@ -198,6 +198,7 @@ body {
 .advantages-item {
   width: 400px;
   box-sizing: border-box;
+  flex-grow: 1;
 }
 
 .advantages-item-dark {
@@ -237,7 +238,7 @@ body {
 }
 
 .advantages-description {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   width: 250px;
 }
