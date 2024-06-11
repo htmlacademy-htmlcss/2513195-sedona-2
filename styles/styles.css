@@ -274,6 +274,7 @@ body {
   list-style: none;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .services-item {
