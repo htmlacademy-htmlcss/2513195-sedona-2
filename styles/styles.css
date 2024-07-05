@@ -796,6 +796,28 @@ body {
   cursor: pointer;
 }
 
+.control-range-label {
+  position: relative;
+}
+
+.control-range-label:first-of-type::after {
+  content: "от";
+  position: absolute;
+  color: #000000;
+  opacity: 0.3;
+  top: 13px;
+  left: 107px;
+}
+
+.control-range-label:last-of-type::after {
+  content: "до";
+  position: absolute;
+  color: #000000;
+  opacity: 0.3;
+  top: 13px;
+  left: 104px;
+}
+
 .control-input[type="checkbox"] + .control-mark {
   position: absolute;
   width: 20px;
@@ -867,11 +889,11 @@ body {
   appearance: textfield;
 }
 
-.control-input-range:first-of-type {
+.control-range-label:first-of-type .control-input-range {
   border-radius: 4px 0 0 4px;
 }
 
-.control-input-range:last-of-type {
+.control-range-label:last-of-type .control-input-range {
   border-radius: 0 4px 4px 0;
 }
 
