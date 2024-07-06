@@ -1409,26 +1409,6 @@ body {
   width: 577px;
 }
 
-.modal-close-button {
-  position: absolute;
-  padding: 0;
-  top: 64px;
-  right: 52px;
-  width: 52px;
-  height: 52px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-  border: none;
-  background-image: url("../images/modal-close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.modal-close-button:hover {
-  background-color: #e6e6e6;
-}
-
 .modal-title {
   margin: 0;
   font-weight: 700;
@@ -1439,27 +1419,128 @@ body {
   margin-bottom: 64px;
 }
 
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button-icon {
+  fill: #000000;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  border: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  border: none;
+}
+
+.modal-close-button:active .close-button-icon {
+  fill-opacity: 0.3;
+}
+
 .serch-hotel-form {
-  display: grid;
-  grid-template-columns: 137px 111px 1fr 111px;
-  row-gap: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-message {
+  position: relative;
+}
+
+.modal-field-container {
+  margin-bottom: 48px;
+  display: flex;
+
 }
 
 .modal-label {
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 12px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
+  width: 137px;
+}
+
+.search-form-input {
+  flex-grow: 1;
+  background-color: #f2f2f2;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #00000099;
+  background-image: url("../images/calendar-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center right 18px;
+}
+
+.search-form-input:hover {
+  background-color: #e6e6e6;
+  color: #00000099;
+}
+
+.search-form-input:active {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.search-form-input:focus {
+  color: #000000;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-count-input {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 14px 0 14px 0;
+  text-align: center;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.modal-count-input::-webkit-outer-spin-button,
+.modal-count-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+
+.count-button-container {
+  display: grid;
+  grid-template-columns: 40px 31px 40px;
 }
 
 .modal-label-right {
-  padding-left: 88px;
-  position: relative;
+  margin-left: 81px;
+  box-sizing: border-box;
+  /* position: relative; */
 }
 
-.modal-label-right::after {
+/* .modal-label-right::after {
   content: "";
   position: absolute;
   width: 26px;
@@ -1470,71 +1551,11 @@ body {
   background-image: url("../images/info-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.modal-field {
-  grid-column: 2 / -1;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.search-form-input {
-  background-color: #f2f2f2;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-}
-
-.modal-message {
-  position: relative;
-}
-
-.modal-message-error::after {
-  content: "Мы не можем отправить вас в прошлое.";
-  position: absolute;
-  color: #ff5757;
-  top: 4px;
-  left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.modal-message-info::after {
-  content: "На эти даты есть свободные номера. Пока есть.";
-  position: absolute;
-  color: #333333;
-  top: 4px;
-  left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.modal-count-input {
-  background-color: #f2f2f2;
-  border: none;
-  padding: 14px 0 14px 0;
-  text-align: center;
-}
-
-.modal-count-button {
-  border: none;
-  background-color: #f2f2f2;
-}
-
-.grid-count-container {
-  display: grid;
-  grid-template-columns: 40px 31px 40px;
-}
+  cursor: pointer;
+} */
 
 .modal-button {
-  grid-column: 1/-1;
+  flex-grow: 1;
   background-color: #83B3D3;
   padding: 18px 30px;
   border: none;
@@ -1562,6 +1583,14 @@ body {
   color: #ffffff4d;
 }
 
+.less-button {
+  border-radius: 4px 0 0 4px;
+}
+
+.more-button {
+  border-radius: 0 4px 4px 0;
+}
+
 .modal-button:disabled,
 .modal-button:disabled:hover,
 .modal-button:disabled:active {
@@ -1569,15 +1598,110 @@ body {
   color: #ffffff;
 }
 
-.modal-count-input::-webkit-outer-spin-button,
-.modal-count-input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.modal-message-error::after {
+  content: "Мы не можем отправить вас в прошлое.";
+  position: absolute;
+  color: #ff5757;
+  bottom: 25px;
+  left: 156px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
+.modal-message-info::after {
+  content: "На эти даты есть свободные номера. Пока есть.";
+  position: absolute;
+  color: #333333;
+  bottom: 25px;
+  left: 156px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
 
-/* .search-form-field::-webkit-inner-spin-button,
-.search-form-field::-webkit-calendar-picker-indicator {
-    opacity: 0;
-    -webkit-appearance: none;
-} */
+.modal-count-button {
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.count-icon {
+  fill: #756157;
+  fill-opacity: 0.3;
+}
+
+.count-icon:hover {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.count-icon:focus {
+  fill: #000000;
+  border: 3px solid #82b3d3;
+  fill-opacity: 1;
+}
+
+.count-icon:active {
+  fill: #000000;
+  fill-opacity: 0.2;
+}
+
+.modal-container-none {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  margin-left: 14px;
+  width: 26px;
+  height: 26px;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-text {
+  background: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  padding: 21px 18px 18px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+  min-height: 143px;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  border: 9px solid transparent;
+  border-bottom: 9px solid #333333;
+  position: absolute;
+  top: -18px;
+  left: 118px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
