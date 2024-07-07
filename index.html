@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico">
   </head>
 
   <body>
@@ -185,55 +185,71 @@
         <div class="modal modal-search-hotel">
           <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
-            <svg class="close-button-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.292 12.708 0 7 5.708 1.292 0 0 1.292 5.708 7 0 12.708 1.292 14 7 8.292 12.708 14 14 12.708 8.292 7 14 1.292Z" /></svg>
+            <svg class="close-button-icon" width="14" height="14" viewBox="0 0 14 14"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.292 12.708 0 7 5.708 1.292 0 0 1.292 5.708 7 0 12.708 1.292 14 7 8.292 12.708 14 14 12.708 8.292 7 14 1.292Z" />
+            </svg>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
             <form action="https://echo.htmlacademy.ru/" method="post" class="serch-hotel-form">
-
               <div class="modal-field-container">
                 <label class="modal-label" for="check in">Дата Заезда:</label>
-                <input class="search-form-input" type="text" id="check in" name="check in" placeholder="Укажите дату" value="27 апреля 2020"
-                  required>
-
+                <input class="search-form-input" type="text" id="check in" name="check in" placeholder="Укажите дату"
+                  value="27 апреля 2020" required>
               </div>
               <span class="modal-message modal-message-error"></span>
               <div class="modal-field-container">
                 <label class="modal-label" for="check out">Дата Выезда:</label>
-                <input class="search-form-input" type="text" id="check out" name="check out"
-                  placeholder="Укажите дату" value="1 сентября 2023" required>
-
+                <input class="search-form-input" type="text" id="check out" name="check out" placeholder="Укажите дату"
+                  value="1 сентября 2023" required>
               </div>
               <span class="modal-message modal-message-info"></span>
               <div class="modal-field-container">
                 <label class="modal-label" for="adult amount">Взрослые:</label>
                 <div class="count-button-container">
                   <button class="modal-count-button less-button" type="button">
-                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z" /></svg>
+                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9v2h14V9H3Z" />
+                    </svg>
                   </button>
                   <input class="modal-count-input" name="adult amount" id="adult amount" value="2" type="number">
                   <button class="modal-count-button more-button" type="button">
-                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
                   </button>
                 </div>
                 <span class="modal-label  modal-label-right form-label-icon">
-                <label class="modal-label" for="kids amount">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  <label class="modal-label" for="kids amount">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                      будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
                 </span>
-              </span>
                 <div class="count-button-container">
                   <button class="modal-count-button less-button" type="button">
-                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z" /></svg>
+                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9v2h14V9H3Z" />
+                    </svg>
                   </button>
                   <input class="modal-count-input" name="kids amount" id="kids amount" value="2" type="number">
                   <button class="modal-count-button more-button" type="button">
-                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                    <svg class="count-icon" width="20" height="20" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
                   </button>
                 </div>
               </div>
