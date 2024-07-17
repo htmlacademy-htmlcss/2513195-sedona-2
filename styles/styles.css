@@ -837,17 +837,48 @@ img {
   left: 104px;
 }
 
-.control-input[type="checkbox"] + .control-mark {
+.control-input[type="checkbox"] + .control {
+
+
+  /* position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  left: 0;
+  top: 1px; */
+}
+
+.control-input[type="checkbox"] + .control::before {
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
   left: 0;
-  top: 1px;
+  top: 2px;
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input[type="checkbox"] + .control::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 3px;
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: left 4px center;
+  display: none;
+}
+
+.control-input[type="checkbox"]:checked + .control::after {
+  display: block;
+}
+
+.control-input[type="radio"] + .control::before {
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -857,33 +888,36 @@ img {
   top: 1px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
-  background-image: url("../images/checkbox.svg");
-  background-repeat: no-repeat;
-  background-position: left 4px center;
-}
-
-.control-input[type="radio"]:checked + .control-mark::after {
+.control-input[type="radio"] + .control::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 5px;
   margin: auto;
   width: 10px;
   height: 10px;
   background-color: #3f5e72;
   border-radius: 50%;
+  display: none;
+}
+
+.control-input[type="radio"]:checked + .control::after {
+  display: block;
 }
 
 .control:hover {
   opacity: 0.6;
 }
 
-.control-input:focus + .control-mark {
+.control-input:focus + .control::before {
   outline: 3px solid #83b3d3;
 }
 
 .control:active {
+  opacity: 0.3;
+}
+
+.control-input:disabled + .control {
   opacity: 0.3;
 }
 
